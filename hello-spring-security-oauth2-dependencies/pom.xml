@@ -7,7 +7,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
+        <spring-boot-mapper.version>2.1.5</spring-boot-mapper.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <lombok.version>1.18.8</lombok.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -17,6 +19,16 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${spring-boot-mapper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
